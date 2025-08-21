@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Modern Professional Color Scheme for Industrial/Tech Company
+   * Using sophisticated blue-gray and emerald accent colors
+  */
+  :root {
+    /* Modern Neutrals */
+    --background: 0 0% 100%;
+    --foreground: 215 28% 17%;
+
+    /* Card Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 215 28% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 17%;
+
+    /* Primary - Modern Deep Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Sophisticated Gray */
+    --secondary: 215 20% 65%;
+    --secondary-foreground: 215 28% 17%;
+
+    /* Muted - Light Background */
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent - Emerald Green */
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive - Modern Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and Inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+
+    /* Modern Border Radius */
+    --radius: 0.75rem;
+
+    /* Sidebar Colors */
+    --sidebar-background: 215 28% 17%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 25% 27%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 25% 27%;
+    --sidebar-ring: 221 83% 53%;
+
+    /* Custom Brand Colors */
+    --brand-blue: 221 83% 53%;
+    --brand-emerald: 160 84% 39%;
+    --brand-slate: 215 28% 17%;
+    --brand-gray: 215 20% 65%;
+    --brand-light: 220 14% 96%;
+  }
+
+  .dark {
+    /* Dark Mode - Modern Professional */
+    --background: 215 28% 17%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 25% 27%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 25% 27%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 25% 27%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 221 83% 53%;
+
+    --sidebar-background: 215 32% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 25% 27%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 215 25% 27%;
+    --sidebar-ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  /* Modern Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+
+  /* Modern Focus States */
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Professional Gradient Backgrounds */
+  .gradient-primary {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(221 83% 43%) 100%
+    );
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--muted)) 0%,
+      hsl(220 14% 89%) 100%
+    );
+  }
+
+  .gradient-accent {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--accent)) 0%,
+      hsl(160 84% 29%) 100%
+    );
+  }
+
+  /* Modern Glass Effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Professional Shadows */
+  .shadow-professional {
+    box-shadow:
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .shadow-elevated {
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Modern Hover Effects */
+  .hover-lift {
+    transition:
+      transform 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 10px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Background Pattern */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
